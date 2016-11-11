@@ -44,6 +44,7 @@
 - 在命令行运行 `javac Deadlock.java`
 
 - Windows系统（把下面这段到记事本里，然后保存为.bat，然将批处理文件放在java程序（Deadlock.class）目录下，双击运行，观察结果
+
 ![Alt text](http://i1.piimg.com/4851/12f5abf75c9aadae.png)
 
 - 上一步的4就是让这个程序跑一千遍，通常情况下，跑个几十遍就会停的像这样：跑到第188次就停了，多少次停是随机的，调节程序中count值，使其发生死锁。
