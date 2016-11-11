@@ -1,10 +1,10 @@
-##ROS°²×°
+##ROSå®‰è£…
 
-@(ÎÒµÄµÚÒ»¸ö±Ê¼Ç±¾)[·Ö²¼Ê½, DOL, Markdown]
+@(æˆ‘çš„ç¬¬ä¸€ä¸ªç¬”è®°æœ¬)[åˆ†å¸ƒå¼, DOL, Markdown]
  
 - **SLAM**
 - **ROS** 
-- **°²×°Á÷³Ì** 
+- **å®‰è£…æµç¨‹** 
 - **cartographer**
 
 
@@ -14,20 +14,20 @@
 
 -----------------------
 #### SLAM
-¡ª¡ªsimultaneous localization and mapping
-- Í¬Ê±¶¨Î»Óë½¨Í¼£»¼òµ¥À´Ëµ¾ÍÊÇ¡ª¡ªÈÏÂ· 
--  ÓĞµÄÓÃ¼¤¹âÀ×´ï×ö£¨±ÈÈçgoogleµÄcartographer£©£»ÓĞµÄÈËÓÃÉã ÏñÍ·×ö£¨µ¥Ä¿¡¢Ë«Ä¿£© 
--   ROSÉÏÓĞĞí¶àSLAMËã·¨¼°¶ÔÓ¦µÄÊı¾İ¼¯¿ÉÒÔÔ¶¹ÛºÍÙôÍæ
+â€”â€”simultaneous localization and mapping
+- åŒæ—¶å®šä½ä¸å»ºå›¾ï¼›ç®€å•æ¥è¯´å°±æ˜¯â€”â€”è®¤è·¯ 
+-  æœ‰çš„ç”¨æ¿€å…‰é›·è¾¾åšï¼ˆæ¯”å¦‚googleçš„cartographerï¼‰ï¼›æœ‰çš„äººç”¨æ‘„ åƒå¤´åšï¼ˆå•ç›®ã€åŒç›®ï¼‰ 
+-   ROSä¸Šæœ‰è®¸å¤šSLAMç®—æ³•åŠå¯¹åº”çš„æ•°æ®é›†å¯ä»¥è¿œè§‚å’Œäºµç©
 
 --------------------------
 #### ROS
-¡ª¡ªRobot operation system£¬
-- Ò»Ì×¿ò¼Ü£¬µ×²ãÌá¹©Ó²¼şÇı¶¯£¬Èí¼ş²ã ÃæÖ§³ÖÍ¨ÓÃµÄÎÄ¼ş¸ñÊ½¡£
-- ÎÒÃÇÖ÷ÒªÓÃËüµÄ·ÂÕæ¹¦ÄÜ¡£
-- ÎÒÃÇÔÚUbuntuÖĞ°²×°
+â€”â€”Robot operation systemï¼Œ
+- ä¸€å¥—æ¡†æ¶ï¼Œåº•å±‚æä¾›ç¡¬ä»¶é©±åŠ¨ï¼Œè½¯ä»¶å±‚ é¢æ”¯æŒé€šç”¨çš„æ–‡ä»¶æ ¼å¼ã€‚
+- æˆ‘ä»¬ä¸»è¦ç”¨å®ƒçš„ä»¿çœŸåŠŸèƒ½ã€‚
+- æˆ‘ä»¬åœ¨Ubuntuä¸­å®‰è£…
 
 --------------------------
-#### °²×°Á÷³Ì
+#### å®‰è£…æµç¨‹
 
 >Ubuntu install of ROS Jade
 >1. Installation
@@ -69,7 +69,7 @@
 ```
 	sudo apt-get update
 ```
-* Ñ¡ÔñDesktop-Full Install
+* é€‰æ‹©Desktop-Full Install
 ```
 	sudo apt-get install ros-jade-desktop-full
 ```
@@ -113,51 +113,53 @@ $ apt-get source ros-jade-laser-pipeline
 ```
 A drawback might be that you have to specify a single, exact package name (asterisks do not work). 
 
+![Alt text](./1476954994734.png)
+
 ------------------------------
- [Ubuntu 14.04£¬15.04 ²Î¿¼²©¿Í](http://wiki.ros.org/jade/Installation/Ubuntu)`
+ [Ubuntu 14.04ï¼Œ15.04 å‚è€ƒåšå®¢](http://wiki.ros.org/jade/Installation/Ubuntu)`
  
 --------------
 
-#### Cartographer°²×°ºÍ2D 3D²âÊÔÍ¼
+#### Cartographerå®‰è£…å’Œ2D 3Dæµ‹è¯•å›¾
 
-¡ª¡ªCartographerÊÇGoogle¿ªÔ´µÄÒ»¸öSLAMËã·¨£¬»ùÓÚ¼¤¹âÀ×´ïÒÔ¼° IMU£¨¹ßĞÔ´¦Àíµ¥Ôª£©
+â€”â€”Cartographeræ˜¯Googleå¼€æºçš„ä¸€ä¸ªSLAMç®—æ³•ï¼ŒåŸºäºæ¿€å…‰é›·è¾¾ä»¥åŠ IMUï¼ˆæƒ¯æ€§å¤„ç†å•å…ƒï¼‰
 
 ----------
-##### °²×°ÒÀÀµÏî£º  
+##### å®‰è£…ä¾èµ–é¡¹ï¼š  
 
 	sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-compiler python-sphinx  ros-indigo-tf2-eigen libatlas-base-dev libsuitesparse-dev liblapack-dev
 
 -----------
-#####Ê×ÏÈ°²×°ceres solver£¬Ñ¡ÔñµÄ°æ±¾ÊÇ1.11,
-ÏÈÔÚhomeÄ¿Â¼ÏÂĞÂ½¨ÎÄ¼ş¼Ğ£¬ÃüÃûÎªcatkin_ws,´ò¿ªÖÕ¶Ë½øÈë(cd)¸ÃÎÄ¼şµÄÄ¿Â¼ÏÂ£¬Ö´ĞĞÒÔÏÂ´úÂë£º   
+#####é¦–å…ˆå®‰è£…ceres solverï¼Œé€‰æ‹©çš„ç‰ˆæœ¬æ˜¯1.11,
+å…ˆåœ¨homeç›®å½•ä¸‹æ–°å»ºæ–‡ä»¶å¤¹ï¼Œå‘½åä¸ºcatkin_ws,æ‰“å¼€ç»ˆç«¯è¿›å…¥(cd)è¯¥æ–‡ä»¶çš„ç›®å½•ä¸‹ï¼Œæ‰§è¡Œä»¥ä¸‹ä»£ç ï¼š   
 
 	git clone https://github.com/hitcm/ceres-solver-1.11.0.git
 
-Ö´ĞĞÖ®ºó£¬´ò¿ªcatkin_wsÎÄ¼ş¼Ğ£¬¿ÉÒÔ¿´µ½Ãû×ÖÎªceres-solver-1.11.0µÄÎÄ¼ş¼Ğ£¬´ò¿ª²¢ĞÂ½¨ÎÄ¼ş¼Ğbuild,ÔÚÖÕ¶Ë½øÈëµ½¸ÃÄ¿Â¼ÏÂ£¨ĞÂ½¨ÎÄ¼ş¼ĞÒ²¿ÉÒÔÔÚÖÕ¶Ë½øĞĞ£©£¬Ö´ĞĞÒÔÏÂÖ¸Áî£º  
+æ‰§è¡Œä¹‹åï¼Œæ‰“å¼€catkin_wsæ–‡ä»¶å¤¹ï¼Œå¯ä»¥çœ‹åˆ°åå­—ä¸ºceres-solver-1.11.0çš„æ–‡ä»¶å¤¹ï¼Œæ‰“å¼€å¹¶æ–°å»ºæ–‡ä»¶å¤¹build,åœ¨ç»ˆç«¯è¿›å…¥åˆ°è¯¥ç›®å½•ä¸‹ï¼ˆæ–°å»ºæ–‡ä»¶å¤¹ä¹Ÿå¯ä»¥åœ¨ç»ˆç«¯è¿›è¡Œï¼‰ï¼Œæ‰§è¡Œä»¥ä¸‹æŒ‡ä»¤ï¼š  
  
 	 cd ceres-solver-1.11.0/build
 
-ÔÚ¸ÃÄ¿Â¼ÏÂÒÀ´ÎÖ´ĞĞÒÔÏÂÖ¸Áî£º  
+åœ¨è¯¥ç›®å½•ä¸‹ä¾æ¬¡æ‰§è¡Œä»¥ä¸‹æŒ‡ä»¤ï¼š  
 
 	cmake ..
 	make
 	sudo make install
 
 -----------
-##### ½Ó×Å°²×°cartographer
+##### æ¥ç€å®‰è£…cartographer
 
-ÔÚcatkin_wsÏÂĞÂ½¨ÎÄ¼ş¼Ğ£¬ÎÒµÄÃüÃûÎªcart£¬ËæºóÔÚÖÕ¶Ë½øÈë¸ÃÄ¿Â¼ÏÂ£¬Ö´ĞĞÒÔÏÂÖ¸Áî£º  
+åœ¨catkin_wsä¸‹æ–°å»ºæ–‡ä»¶å¤¹ï¼Œæˆ‘çš„å‘½åä¸ºcartï¼Œéšååœ¨ç»ˆç«¯è¿›å…¥è¯¥ç›®å½•ä¸‹ï¼Œæ‰§è¡Œä»¥ä¸‹æŒ‡ä»¤ï¼š  
 
 	git clone https://github.com/hitcm/cartographer.git
 
-Í¬ÑùµÄ£¬Ö´ĞĞ½áÊøºó¿ÉÒÔ¿´µ½Ò»¸öcartographerµÄÎÄ¼ş¼Ğ£¬ÔÚÀïÃæĞÂ½¨buildÎÄ¼ş¼Ğ£¬²¢ÔÚÖÕ¶Ë½øÈë¸ÃÂ·¾¶ÏÂ£º  
+åŒæ ·çš„ï¼Œæ‰§è¡Œç»“æŸåå¯ä»¥çœ‹åˆ°ä¸€ä¸ªcartographerçš„æ–‡ä»¶å¤¹ï¼Œåœ¨é‡Œé¢æ–°å»ºbuildæ–‡ä»¶å¤¹ï¼Œå¹¶åœ¨ç»ˆç«¯è¿›å…¥è¯¥è·¯å¾„ä¸‹ï¼š  
 	
 	cd cartographer
 	mkdir build
 	cd build
 
 
-½øÈëºó£¬ÒÀ´ÎÖ´ĞĞÒÔÏÂÖ¸Áî£º  
+è¿›å…¥åï¼Œä¾æ¬¡æ‰§è¡Œä»¥ä¸‹æŒ‡ä»¤ï¼š  
 
 	cmake .. -G Ninja 
 	ninja
@@ -165,7 +167,7 @@ A drawback might be that you have to specify a single, exact package name (aster
 	sudo ninja install
 	
 -------
-##### °²×°catkin_ws
+##### å®‰è£…catkin_ws
 Install wstool and rosdep. 
 
 	sudo apt-get update 
@@ -185,22 +187,22 @@ Install deb dependencies.
 	rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
 
 ------
-#####°²×°cartographer_ros
-½øÈëcatkin_wsµÄsrcÄ¿Â¼ÏÂ£¬Ö´ĞĞÒÔÏÂÖ¸Áî£º 
+#####å®‰è£…cartographer_ros
+è¿›å…¥catkin_wsçš„srcç›®å½•ä¸‹ï¼Œæ‰§è¡Œä»¥ä¸‹æŒ‡ä»¤ï¼š 
  
 	git clone https://github.com/hitcm/cartographer_ros.git
-catkin_wsÏÂÖ´ĞĞÖ¸Áî£º
+catkin_wsä¸‹æ‰§è¡ŒæŒ‡ä»¤ï¼š
 
 	catkin_make
 
 ------
-##### ÅÜ2dÍ¼²âÊÔ
-Êı¾İÏÂÔØ²âÊÔ£¬ÎÒµÄ·½·¨ÊÇÓÃÑ¸À×ÏÂÔØµ½±¾µØÔÙ¸´ÖÆµ½Ubuntu£º
-[windowsÏÂÔØµØÖ·](https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag)
+##### è·‘2då›¾æµ‹è¯•
+æ•°æ®ä¸‹è½½æµ‹è¯•ï¼Œæˆ‘çš„æ–¹æ³•æ˜¯ç”¨è¿…é›·ä¸‹è½½åˆ°æœ¬åœ°å†å¤åˆ¶åˆ°Ubuntuï¼š
+[windowsä¸‹è½½åœ°å€](https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag)
 
-ÏÂÔØÍê³É²¢¸´ÖÆµ½Ubuntuºó£¬ÔÚÖÕ¶ËÖ´ĞĞÖ¸Áî£º
+ä¸‹è½½å®Œæˆå¹¶å¤åˆ¶åˆ°Ubuntuåï¼Œåœ¨ç»ˆç«¯æ‰§è¡ŒæŒ‡ä»¤ï¼š
 
 	roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
-Ö´ĞĞÖ¸ÁîºóÈç¹ûÃ»ÓĞ´íÎóÌáÊ¾£¬¾Í¿ÉÒÔ¿´µ½ÏÂÃæµÄÕıÈ·Í¼Ê¾¡£
+æ‰§è¡ŒæŒ‡ä»¤åå¦‚æœæ²¡æœ‰é”™è¯¯æç¤ºï¼Œå°±å¯ä»¥çœ‹åˆ°ä¸‹é¢çš„æ­£ç¡®å›¾ç¤ºã€‚
 
 
