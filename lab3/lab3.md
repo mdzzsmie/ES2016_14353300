@@ -1,4 +1,4 @@
-﻿##DOL实例分析&编程
+## DOL实例分析&编程
 
 @(开发环境)[分布式|DOL|Markdown]
  
@@ -19,7 +19,9 @@
 $	ant -f runexample.xml -Dnumber=1
 ```
 成功结果如图
+
 ![Alt text](http://i1.piimg.com/4851/9a075d05a716c5ae.png)
+
 
 #### 分析example
 我们来example文件中各文件夹含义：
@@ -35,9 +37,13 @@ $	ant -f runexample.xml -Dnumber=1
 #### 分析修改example1
 运行example1之后的dot图，其中包含生产者、平方模块、消费者
 (见博客`http://blog.sina.com.cn/s/blog_7983e5f10100q7jd.html`)
+
 ![Alt text](http://i1.piimg.com/4851/2873713acc2057a4.png)
+
 可以看到src里面，对应gennerator这个模块的代码就是gennerator.h, generator.c
+
 ![Alt text](http://i1.piimg.com/4851/8ef22a69f16454c2.png)
+
 
 ##### 来看generator.c文件：
 ```
@@ -112,14 +118,20 @@ int square_fire(DOLProcess *p) {
 * 将`i=i*i `改为 `i=i*i*i` 就将二次方修改为三次方了。
 
 ##### 实验结果：
+
 ![Alt text](http://i1.piimg.com/4851/3dca1ece4e18f11a.png)
+
 
 ---------------------------
 #### 分析修改example2
 各进程功能定义与example1相同，不同之处在于example2架构中中包含3个square进程，故结果为 i^8
+
 ![Alt text](http://i1.piimg.com/4851/61b0f00fd3821274.png)
+
 原运行结果：
+
 ![Alt text](http://i1.piimg.com/4851/f8aecb4c2eba4bfe.png)
+
 ##### 分析修改example2.xml
 ```
  <variable value="3" name="N"/>
@@ -139,9 +151,13 @@ int square_fire(DOLProcess *p) {
   </iterator>
 ```
 该xml文件中，通过迭代器迭代，定义了三个square模块，因此是(i^2)^3 ，我们将` <variable value="3" name="N"/>`中的“3”改为“2”，再运行看：
+
 ![Alt text](http://i1.piimg.com/4851/8077f72895e6ee8d.png)
+
 结果和我们想的一样，变成了两次迭代。
+
 ![Alt text](http://i1.piimg.com/4851/600c4a8b52e063fd.png)
+
 
 ###  实验心得
 
