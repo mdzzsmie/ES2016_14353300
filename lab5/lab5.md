@@ -113,7 +113,7 @@ $ apt-get source ros-jade-laser-pipeline
 ```
 A drawback might be that you have to specify a single, exact package name (asterisks do not work). 
 
-![Alt text](https://github.com/mdzzsmie/ES2016_14353300/blob/master/lab5/img1.png)
+![Alt text](http://i1.piimg.com/4851/8d35a6a65cd3215b.png)
 
 ------------------------------
  [Ubuntu 14.04，15.04 参考博客](http://wiki.ros.org/jade/Installation/Ubuntu)`
@@ -205,4 +205,4 @@ catkin_ws下执行指令：
 	roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
 执行指令后如果没有错误提示，就可以看到下面的正确图示。
 
-![Alt text](https://github.com/mdzzsmie/ES2016_14353300/blob/master/lab5/img2.jpg)
+![Alt text](http://i1.piimg.com/4851/6324bb0cbac14ca6.jpg)
